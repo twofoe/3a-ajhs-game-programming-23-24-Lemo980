@@ -1,4 +1,4 @@
-# Collections Examples, Eliot Blanton, v0.2a
+# Collections Examples, Eliot Blanton, v0.2b
 
 #LIST -- Ordered Changeable, Allows duplicate values
 
@@ -47,14 +47,47 @@ classGPA[0] = 3.57
 #print(classGPA)
 
 #pause WYOC -- change 5th element
-breakfastFoods[4] = "Eggs"
-testScores[4] = 3
-classGPA[4] = 0.75
+#breakfastFoods[4] = "Eggs"
+#testScores[4] = 3
+#classGPA[4] = 0.75
 
 
+#print(breakfastFoods)
+#print(testScores)
+#print(classGPA)
+
+#Adding and inserting items to a list
+#.append() adds an item to the end of a list
+breakfastFoods.append("Hashbrowns")
 print(breakfastFoods)
+testScores.append(99)
 print(testScores)
+classGPA.append(1.99)
 print(classGPA)
+
+#.insert() Allows you to place an item at a specific index in the list
+#breakfastFoods.insert(3, "Parfait")
+#print(breakfastFoods)
+#testScores.insert(3, 55)
+#print(testScores)
+#classGPA.insert(3, 0.0)
+#print(classGPA)
+
+#WYOC -- append an item to each list
+#breakfastFoods.append("French toast")
+#print(breakfastFoods)
+#testScores.append(45)
+#print(testScores)
+#classGPA.append(2.87)
+#print(classGPA)
+
+breakfastFoods.insert(4, "Toast")
+print(breakfastFoods)
+testScores.insert(4, 59)
+print(testScores)
+classGPA.insert(4, 3.23)
+print(classGPA)
+
 
 
 
