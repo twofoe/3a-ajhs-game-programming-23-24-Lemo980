@@ -1,4 +1,4 @@
-# Collections Examples, Eliot Blanton, v0.2c
+# Collections Examples, Eliot Blanton, v0.3a
 
 #LIST -- Ordered Changeable, Allows duplicate values
 
@@ -98,12 +98,12 @@ print(classGPA)
 #print(classGPA)
 
 #To delete using the index value we use .pop
-breakfastFoods.pop(4)
-print(breakfastFoods)
-testScores.pop(4)
-print(testScores)
-classGPA.pop(4)
-print(classGPA)
+#breakfastFoods.pop(4)
+#print(breakfastFoods)
+#testScores.pop(4)
+#print(testScores)
+#classGPA.pop(4)
+#print(classGPA)
 
 #WYOC -- .pop() the second element from each list and .remove() any item from the list
 #breakfastFoods.pop(1)
@@ -117,9 +117,10 @@ print(classGPA)
 #print(classGPA)
 #print(testScores)
 
-
-
-
+# Determining list length
+print(f"There are {len(breakfastFoods)} items in the breakfast foods list")
+print(f"There are {len(testScores)} items in the test scores list")
+print(f"There are {len(classGPA)} items in the class GPA list")
 
 
 
