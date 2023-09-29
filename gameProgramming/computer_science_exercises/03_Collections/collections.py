@@ -1,4 +1,4 @@
-# Collections Examples, Eliot Blanton, v0.1a
+# Collections Examples, Eliot Blanton, v0.1b
 
 #LIST -- Ordered Changeable, Allows duplicate values
 
@@ -15,4 +15,37 @@ classGPA = [3.14, 2.25, 1,74, 1.99, 0.99, 4.25]
 print (breakfastFoods)
 print (testScores)
 print (classGPA)
+
+#Accessing specific list elements --  FIRST ELEMENT IS INDEX 0
+print(breakfastFoods[0])
+print(testScores[0])
+print(classGPA[0])
+
+#Accessing last element in list
+
+print(breakfastFoods[-1])
+print(testScores[-1])
+print(classGPA[-1])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
