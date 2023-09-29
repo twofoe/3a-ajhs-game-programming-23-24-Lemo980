@@ -1,4 +1,4 @@
-# Collections Examples, Eliot Blanton, v0.2b
+# Collections Examples, Eliot Blanton, v0.2c
 
 #LIST -- Ordered Changeable, Allows duplicate values
 
@@ -81,12 +81,45 @@ print(classGPA)
 #classGPA.append(2.87)
 #print(classGPA)
 
-breakfastFoods.insert(4, "Toast")
+#breakfastFoods.insert(4, "Toast")
+#print(breakfastFoods)
+#testScores.insert(4, 59)
+#print(testScores)
+#classGPA.insert(4, 3.23)
+#print(classGPA)
+
+#Deleting items from a list
+#use .remove() to remove a specific item from the list
+#breakfastFoods.remove("Waffles")
+#print(breakfastFoods)
+#testScores.remove(100)
+#print(testScores)
+#classGPA.remove(2.25)
+#print(classGPA)
+
+#To delete using the index value we use .pop
+breakfastFoods.pop(4)
 print(breakfastFoods)
-testScores.insert(4, 59)
+testScores.pop(4)
 print(testScores)
-classGPA.insert(4, 3.23)
+classGPA.pop(4)
 print(classGPA)
+
+#WYOC -- .pop() the second element from each list and .remove() any item from the list
+#breakfastFoods.pop(1)
+#testScores.pop(1)
+#classGPA.pop(1)
+
+#breakfastFoods.remove("Pancakes")
+#testScores.remove(15)
+#classGPA.remove(4.25)
+#print(breakfastFoods)
+#print(classGPA)
+#print(testScores)
+
+
+
+
 
 
 
