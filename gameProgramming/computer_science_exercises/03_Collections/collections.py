@@ -1,4 +1,4 @@
-# Collections Examples, Eliot Blanton, v0.1d
+# Collections Examples, Eliot Blanton, v0.2a
 
 #LIST -- Ordered Changeable, Allows duplicate values
 
@@ -33,17 +33,28 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 #print(testScores[2])
 #print(classGPA[2])
 
+# changing items in a list
+breakfastFoods[0] = "sausage"
+testScores[0] = 97
+classGPA[0] = 3.57
+
+#print(breakfastFoods[0])
+#print(testScores[0])
+#print(classGPA[0])
+
+#print(breakfastFoods)
+#print(testScores)
+#print(classGPA)
+
+#pause WYOC -- change 5th element
+breakfastFoods[4] = "Eggs"
+testScores[4] = 3
+classGPA[4] = 0.75
 
 
-
-
-
-
-
-
-
-
-
+print(breakfastFoods)
+print(testScores)
+print(classGPA)
 
 
 
