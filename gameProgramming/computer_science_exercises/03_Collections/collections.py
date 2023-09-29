@@ -118,13 +118,23 @@ print(classGPA)
 #print(testScores)
 
 # Determining list length
-print(f"There are {len(breakfastFoods)} items in the breakfast foods list")
-print(f"There are {len(testScores)} items in the test scores list")
-print(f"There are {len(classGPA)} items in the class GPA list")
+#print(f"There are {len(breakfastFoods)} items in the breakfast foods list")
+#print(f"There are {len(testScores)} items in the test scores list")
+#print(f"There are {len(classGPA)} items in the class GPA list")
 
+#List methods -- Functions for working with lists
+#sorting lists -- alphanumerical -- ascending -- capital letters before lowercase
+print(f"The original breakfast foods list is {breakfastFoods}")
+breakfastFoods.sort()
+print(f"The sorted breakfast foods list is {breakfastFoods}")
 
+print(f"The original test scores list is {testScores}")
+testScores.sort()
+print(f"The sorted test scores list is {testScores}")
 
-
+print(f"The original class GPA list is {classGPA}")
+classGPA.sort()
+print(f"The sorted class GPA list is {classGPA}")
 
 
 
