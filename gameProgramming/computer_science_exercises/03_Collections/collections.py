@@ -1,4 +1,4 @@
-# Collections Examples, Eliot Blanton, v0.4b
+# Collections Examples, Eliot Blanton, v0.4c
 
 #LIST -- Ordered Changeable, Allows duplicate values
 
@@ -141,25 +141,35 @@ testScores = [95, 100, 25, 15, 27, 35, 100]
 classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25, 0.99]
 
 #.count() will return number of times a value appears in a list
-numWaffles = breakfastFoods.count("Waffles")
-print(f"There are {numWaffles} Waffles in the list.")
+#numWaffles = breakfastFoods.count("Waffles")
+#print(f"There are {numWaffles} Waffles in the list.")
 
-numMilk = breakfastFoods.count("Milk")
-print(f"There are {numMilk} Milks in the list.")
+#numMilk = breakfastFoods.count("Milk")
+#print(f"There are {numMilk} Milks in the list.")
 
 #WYOC-- use .count() to count for a single item in the list and any multiple items for testscores and classGPA
 
-numFifteen = testScores.count(15)
-print(f"There are {numFifteen} scores of 15 in the list.")
+#numFifteen = testScores.count(15)
+#print(f"There are {numFifteen} scores of 15 in the list.")
 
-numHundred = testScores.count(100)
-print(f"There are {numHundred} scores of 100 in the list.")
+#numHundred = testScores.count(100)
+#print(f"There are {numHundred} scores of 100 in the list.")
 
-numPi = classGPA.count(3.14)
-print(f"There are {numPi} GPAs of 3.14 in the list.")
+#numPi = classGPA.count(3.14)
+#print(f"There are {numPi} GPAs of 3.14 in the list.")
 
-numPoint99 = classGPA.count(0.99)
-print(f"There are {numPoint99} GPAs of 0.99 in the list.")
+#numPoint99 = classGPA.count(0.99)
+#print(f"There are {numPoint99} GPAs of 0.99 in the list.")
+
+#Deleting all contents of a list -- .clear()
+breakfastFoods.clear()
+print(f"The breakfast foods list is {breakfastFoods}")
+
+testScores.clear()
+print(f"The test scores list is {testScores}")
+
+classGPA.clear()
+print(f"The class GPA list is {classGPA}")
 
 
 
