@@ -1,15 +1,15 @@
-# Collections Examples, Eliot Blanton, v0.3a
+# Collections Examples, Eliot Blanton, v0.4b
 
 #LIST -- Ordered Changeable, Allows duplicate values
 
-breakfastFoods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
+#breakfastFoods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
 
 #Each item in the list is known as an element
 #The postion in the list for each is known as the index
 #The element bacon is at index 0
 #index -1 is the last item in the list
-testScores = [95, 100, 25, 15, 27, 35]
-classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
+#testScores = [95, 100, 25, 15, 27, 35]
+#classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 
 # printing contents of a list
 #print (breakfastFoods)
@@ -34,9 +34,9 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 #print(classGPA[2])
 
 # changing items in a list
-breakfastFoods[0] = "sausage"
-testScores[0] = 97
-classGPA[0] = 3.57
+#breakfastFoods[0] = "sausage"
+#testScores[0] = 97
+#classGPA[0] = 3.57
 
 #print(breakfastFoods[0])
 #print(testScores[0])
@@ -58,12 +58,12 @@ classGPA[0] = 3.57
 
 #Adding and inserting items to a list
 #.append() adds an item to the end of a list
-breakfastFoods.append("Hashbrowns")
-print(breakfastFoods)
-testScores.append(99)
-print(testScores)
-classGPA.append(1.99)
-print(classGPA)
+#breakfastFoods.append("Hashbrowns")
+#print(breakfastFoods)
+#testScores.append(99)
+#print(testScores)
+#classGPA.append(1.99)
+#print(classGPA)
 
 #.insert() Allows you to place an item at a specific index in the list
 #breakfastFoods.insert(3, "Parfait")
@@ -124,17 +124,42 @@ print(classGPA)
 
 #List methods -- Functions for working with lists
 #sorting lists -- alphanumerical -- ascending -- capital letters before lowercase
-print(f"The original breakfast foods list is {breakfastFoods}")
-breakfastFoods.sort()
-print(f"The sorted breakfast foods list is {breakfastFoods}")
+#print(f"The original breakfast foods list is {breakfastFoods}")
+#breakfastFoods.sort()
+#print(f"The sorted breakfast foods list is {breakfastFoods}")
 
-print(f"The original test scores list is {testScores}")
-testScores.sort()
-print(f"The sorted test scores list is {testScores}")
+#print(f"The original test scores list is {testScores}")
+#testScores.sort()
+#print(f"The sorted test scores list is {testScores}")
 
-print(f"The original class GPA list is {classGPA}")
-classGPA.sort()
-print(f"The sorted class GPA list is {classGPA}")
+#print(f"The original class GPA list is {classGPA}")
+#classGPA.sort()
+#print(f"The sorted class GPA list is {classGPA}")
+
+breakfastFoods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk", "Milk"]
+testScores = [95, 100, 25, 15, 27, 35, 100]
+classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25, 0.99]
+
+#.count() will return number of times a value appears in a list
+numWaffles = breakfastFoods.count("Waffles")
+print(f"There are {numWaffles} Waffles in the list.")
+
+numMilk = breakfastFoods.count("Milk")
+print(f"There are {numMilk} Milks in the list.")
+
+#WYOC-- use .count() to count for a single item in the list and any multiple items for testscores and classGPA
+
+numFifteen = testScores.count(15)
+print(f"There are {numFifteen} scores of 15 in the list.")
+
+numHundred = testScores.count(100)
+print(f"There are {numHundred} scores of 100 in the list.")
+
+numPi = classGPA.count(3.14)
+print(f"There are {numPi} GPAs of 3.14 in the list.")
+
+numPoint99 = classGPA.count(0.99)
+print(f"There are {numPoint99} GPAs of 0.99 in the list.")
 
 
 
