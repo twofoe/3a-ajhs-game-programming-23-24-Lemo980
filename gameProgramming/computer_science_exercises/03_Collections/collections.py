@@ -1,4 +1,4 @@
-# Collections Examples, Eliot Blanton, v0.4c
+# Collections Examples, Eliot Blanton, v0.5a
 
 #LIST -- Ordered Changeable, Allows duplicate values
 
@@ -162,18 +162,19 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25, 0.99]
 #print(f"There are {numPoint99} GPAs of 0.99 in the list.")
 
 #Deleting all contents of a list -- .clear()
-breakfastFoods.clear()
-print(f"The breakfast foods list is {breakfastFoods}")
+#breakfastFoods.clear()
+#print(f"The breakfast foods list is {breakfastFoods}")
 
-testScores.clear()
-print(f"The test scores list is {testScores}")
+#testScores.clear()
+#print(f"The test scores list is {testScores}")
 
-classGPA.clear()
-print(f"The class GPA list is {classGPA}")
+#classGPA.clear()
+#print(f"The class GPA list is {classGPA}")
 
+#Common Bugs -- Index out of range
+print(f"The last item in the list is {breakfastFoods[3]}")
 
-
-
+print(f"The last item in the list is {testScores[len(testScores) -1]}")
 
 
 
