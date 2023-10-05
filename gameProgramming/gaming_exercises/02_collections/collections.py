@@ -15,34 +15,44 @@
 # print(playerInventory)
 
 #Fixed inventory system
-weaponList = [
-    True, #crossbow
-    False, #longsword
-    True, #dagger
-    True, #magic staff
-    False  #gauntlets
+# weaponList = [
+#     True, #crossbow
+#     False, #longsword
+#     True, #dagger
+#     True, #magic staff
+#     False  #gauntlets
+# ]
+# #Each item in a list is called an element
+# #The location of each element is called the index
+# #First element is index[0]
+# #index[-1] is the last element in a list
+# weaponNum = 0
+# while weaponNum < len(weaponList) :
+#     if weaponNum == 0 and weaponList[0] == True:
+#         print("Your character is equipped with a powerful steel crossbow.\n")
+#     if weaponNum == 1 and weaponList[1] == True:
+#         print("Your character is equipped with a heavy iron longsword.\n")
+#     if weaponNum == 2 and weaponList[2] == True:
+#         print("Your character is equipped with a small silver dagger.\n")   
+#     if weaponNum == 3 and weaponList[3] == True:
+#         print("Your character is equipped with a glowing magic staff.\n")
+#     if weaponNum == 4 and weaponList[4] == True:
+#         print("Your character is equipped with a pair of spiked gauntlets.\n")
+#     weaponNum += 1
+
+#Keys
+doorKeys = [
+    "red",
+    "green",
+    "purple",
+    "blue",
+    "yellow"
 ]
-#Each item in a list is called an element
-#The location of each element is called the index
-#First element is index[0]
-#index[-1] is the last element in a list
-weaponNum = 0
-while weaponNum < len(weaponList) :
-    if weaponNum == 0 and weaponList[0] == True:
-        print("Your character is equipped with a powerful steel crossbow.\n")
-    if weaponNum == 1 and weaponList[1] == True:
-        print("Your character is equipped with a heavy iron longsword.\n")
-    if weaponNum == 2 and weaponList[2] == True:
-        print("Your character is equipped with a small silver dagger.\n")   
-    if weaponNum == 3 and weaponList[3] == True:
-        print("Your character is equipped with a glowing magic staff.\n")
-    if weaponNum == 4 and weaponList[4] == True:
-        print("Your character is equipped with a pair of spiked gauntlets.\n")
-    weaponNum += 1
-
-
-
-
+item = input("Which key do you require?\n").lower()
+if item in doorKeys:
+    print(f"You have the {item} key!")
+else:
+        print(f"You do not have the {item} key!")
 
 
 
