@@ -55,15 +55,41 @@
 #         print(f"You do not have the {item} key!")
 
 #Random enemy generator
-enemyBase = ["Skeleton", "Gremlin", "Dragon", "Ghost", "Crab"]
-enemyType = ["Bomber", "Swordsman", "Wizard", "Assassin", "Brawler"]
-enemyPrefix = ["Giant", "Flying", "Flaming", "Armored", "Small"]
+enemyBase = [
+    "Skeleton",
+    "Gremlin",
+    "Dragon",
+    "Ghost",
+    "Crab"
+    ]
+enemyType = [
+    "Bomber",
+    "Swordsman",
+    "Wizard",
+    "Assassin",
+    "Brawler"
+    ]
+enemyPrefix = [
+    "Giant",
+    "Flying",
+    "Flaming",
+    "Armored",
+    "Small"
+    ]
 
 
+import random
 
+#Index range (0, 4)
+enemyNames = []
+while len(enemyNames) < 15:
+    enemyBaseGen = enemyBase[random.randint(0,4)]
+    enemyTypeGen = enemyType[random.randint(0,4)]
+    enemyPrefixGen = enemyPrefix[random.randint(0,4)]
+    newEnemy = enemyPrefixGen + " " + enemyBaseGen + " " + enemyTypeGen
+    enemyNames.append(newEnemy)
 
-
-
+    print(newEnemy)
 
 
 
