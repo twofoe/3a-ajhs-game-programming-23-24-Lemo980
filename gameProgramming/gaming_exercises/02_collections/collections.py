@@ -41,22 +41,23 @@
 #     weaponNum += 1
 
 #Keys
-doorKeys = [
-    "red",
-    "green",
-    "purple",
-    "blue",
-    "yellow"
-]
-item = input("Which key do you require?\n").lower()
-if item in doorKeys:
-    print(f"You have the {item} key!")
-else:
-        print(f"You do not have the {item} key!")
+# doorKeys = [
+#     "red",
+#     "green",
+#     "purple",
+#     "blue",
+#     "yellow"
+# ]
+# item = input("Which key do you require?\n").lower()
+# if item in doorKeys:
+#     print(f"You have the {item} key!")
+# else:
+#         print(f"You do not have the {item} key!")
 
-
-
-
+#Random enemy generator
+enemyBase = ["Skeleton", "Gremlin", "Dragon", "Ghost", "Crab"]
+enemyType = ["Bomber", "Swordsman", "Wizard", "Assassin", "Brawler"]
+enemyPrefix = ["Giant", "Flying", "Flaming", "Armored", "Small"]
 
 
 
