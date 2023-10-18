@@ -1,31 +1,69 @@
-#Functions 10/18/23, Eliot Blanton
+# #Functions 10/18/23, Eliot Blanton
 
-def functionName(): #Function signature
-    print("What is your name?")
-    name = input("Please type your name then press enter.\n")
-    print(f"Hello, {name}. \n")
+import random
+
+# def functionName(): #Function signature
+#     print("What is your name?")
+#     name = input("Please type your name then press enter.\n")
+#     print(f"Hello, {name}. \n")
     
-#Call the function
-functionName()
+# #Call the function
+# functionName()
 
-def happyBirthday(numTimes, age):
+# def happyBirthday(numTimes, age):
+#     count = 0
+#     while count < numTimes:
+#         print("Happy birthday\n")
+#         count += 1
+#     print(f"Wow you're {age} years old!\n")
+    
+
+# #happyBirthday(5, 16)
+
+# def functionWithReturn(num1, num2):
+#     sum = num1+ num2
+#     quotient = sum / 5
+#     return quotient #return immediately exits a function
+
+# def functionWithoutReturn(num1, num2):
+#     sum = num1+ num2
+#     quotient = sum / 5
+
+# example = functionWithoutReturn(5,10)
+# print(example)
+
+def rollDice(numRoll, sizeRoll):
     count = 0
-    while count < numTimes:
-        print("Happy birthday\n")
+    sum = 0
+    while count < numRoll: 
+        roll = random.randint (1,sizeRoll)
+        sum += roll
+        print(f"Roll # {count}: {roll}\n")
         count += 1
-    print(f"Wow you're {age} years old!\n")
-    
+    print(sum)
+    return sum
 
-#happyBirthday(5, 16)
+print("D4 rolls")
+d4Sum = rollDice(10, 4)
+print("D20 rolls")
+d20Sum = rollDice(2, 20)
 
-def functionWithReturn(num1, num2):
-    sum = num1+ num2
-    quotient = sum / 5
-    return quotient #return immediately exits a function
+def genStat(): #Roll 4 D6, drop the lowest
+    rolls = [0, 0, 0, 0]
+    rolls[0] = rollDice(1, 6)
+    rolls[1] = rollDice(1, 6)
+    rolls[2] = rollDice(1, 6)
+    rolls[3] = rollDice(1, 6)
+    rolls.sort()
 
-def functionWithoutReturn(num1, num2):
-    sum = num1+ num2
-    quotient = sum / 5
+    print (rolls)
 
-example = functionWithoutReturn(5,10)
-print(example)
+
+genStat()
+
+
+
+
+
+
+
