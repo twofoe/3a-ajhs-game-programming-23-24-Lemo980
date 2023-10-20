@@ -31,36 +31,41 @@ import random
 
 # example = functionWithoutReturn(5,10)
 # print(example)
-
 def rollDice(numRoll, sizeRoll):
-    count = 0
-    sum = 0
-    while count < numRoll: 
-        roll = random.randint (1,sizeRoll)
-        sum += roll
-        print(f"Roll # {count}: {roll}\n")
-        count += 1
-    print(sum)
-    return sum
+     count = 0
+     sum = 0
+     while count < numRoll: 
+         roll = random.randint (1,sizeRoll)
+         sum += roll
+         print(f"Roll # {count}: {roll}\n")
+         count += 1
+     print(sum)
+     return sum
 
-print("D4 rolls")
-d4Sum = rollDice(10, 4)
-print("D20 rolls")
-d20Sum = rollDice(2, 20)
+ #print("D4 rolls")
+ #d4Sum = rollDice(10, 4)
+ #print("D20 rolls")
+ #d20Sum = rollDice(2, 20)
 
 def genStat(): #Roll 4 D6, drop the lowest
-    rolls = [0, 0, 0, 0]
-    rolls[0] = rollDice(1, 6)
-    rolls[1] = rollDice(1, 6)
-    rolls[2] = rollDice(1, 6)
-    rolls[3] = rollDice(1, 6)
+    rolls = []
+    count = 0
+    while count < 4:
+        rolls.append(rollDice (1, 6))
+        count += 1
+    
     rolls.sort()
+    rolls.pop(0)
+    print (sum(rolls))
+    return (sum(rolls))
 
-    print (rolls)
+count = 0
+while count < 10000:
+    
 
 
-genStat()
-
+strength = genStat()
+print(f"Your strength: {strength}\n")
 
 
 
