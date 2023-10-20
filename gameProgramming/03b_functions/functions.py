@@ -36,16 +36,16 @@ def rollDice(numRoll, sizeRoll):
     sum = 0
     while count < numRoll: 
         roll = random.randint (1, sizeRoll)
-        print(f"Roll # {count}: {roll}\n")
+        #print(f"Roll # {count}: {roll}\n")
         sum += roll
         count += 1
     #print(sum)
     return sum
 
- #print("D4 rolls")
- #d4Sum = rollDice(10, 4)
- #print("D20 rolls")
- #d20Sum = rollDice(2, 20)
+#print("D4 rolls")
+#d4Sum = rollDice(10, 4)
+#print("D20 rolls")
+#d20Sum = rollDice(2, 20)
 
 #rollDice(18, 4)
 #rollDice(2, 20)
@@ -63,12 +63,12 @@ def genStat(): #Roll 4 D6, drop the lowest
 
 count = 0
 while count < 1000000:
-     test = genStat()
-     if test > 18:
-         print("You have exceeded the maximum roll. \n")
-     if test < 3:
-         print("You have not met the minimum roll. \n")
-     count += 1
+    test = genStat()
+    if test > 18:
+        print("You have exceeded the maximum roll. \n")
+    if test < 3:
+        print("You have not met the minimum roll. \n")
+    count += 1
               
 print("If no error messages, all stats are within range. \n")
 strength =genStat()
