@@ -67,7 +67,7 @@ def displayBoard(missedLetters, correctLetters , secretWord):
     print('Missed letters:', end = ' ')
     for letter in missedLetters:
         print(letter, end = ' ')
-     print()
+    print()
     
     blanks = ' ' * len(secretWord)
     for i in range(len(secretWord)):
@@ -77,9 +77,9 @@ def displayBoard(missedLetters, correctLetters , secretWord):
                #[:i] means slice from the start until index i
                #[i+1:] means slice from i+1 to the end
                #[startingPoint:endingPoint]
-     for letter in blanks:
+    for letter in blanks:
           print(letter, end = ' ')
-     print()
+    print()
      
 def getGuess(alreadyGuessed):
     #Only allow: single character, A-Z only, hasnt been guessed
@@ -95,7 +95,10 @@ def getGuess(alreadyGuessed):
                print("This letter has already been guessed. Please enter a different letter")
           else:
                return guess
-          
+
+def playAgain():
+    print("Would you like to play again? Type yes or no then press enter.")
+    return input().lower().startswith('y') # return true or false based on input
                
 
 
