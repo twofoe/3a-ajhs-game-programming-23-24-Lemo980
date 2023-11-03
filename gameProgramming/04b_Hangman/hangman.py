@@ -54,7 +54,6 @@ O     |
        |
   0=========0''']
 
-
 def getRandomWord(wordList):
     wordIndex = random.randint(0 , len(wordList) - 1)
     #len(listName) - 1 is most common way to prevent index out of range errors.
@@ -82,11 +81,23 @@ def displayBoard(missedLetters, correctLetters , secretWord):
           print(letter, end = ' ')
      print()
      
+def getGuess(alreadyGuessed):
+    #Only allow: single character, A-Z only, hasnt been guessed
+     while True:
+          print('Please guess a letter and press enter')
+          guess = input()
+          guess = guess.lower()
+          if len(guess) != 1:
+               print('Please enter a single letter. \n')
+          elif guess not in "abcdefghijklmnopqrstuvwxyz":
+               print("Please enter an English letter only")
+          elif guess in alreadyGuessed:
+               print("This letter has already been guessed. Please enter a different letter")
+          else:
+               return guess
+          
+               
 
-# i = 0
-# while i < 500000:
-#     getRandomWord(wordList)
-#     i += 1
 
 
 
