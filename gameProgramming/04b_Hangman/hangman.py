@@ -85,8 +85,7 @@ def getGuess(alreadyGuessed):
     #Only allow: single character, A-Z only, hasnt been guessed
      while True:
           print('Please guess a letter and press enter')
-          guess = input()
-          guess = guess.lower()
+          guess = input().lower()
           if len(guess) != 1:
                print('Please enter a single letter. \n')
           elif guess not in "abcdefghijklmnopqrstuvwxyz":
