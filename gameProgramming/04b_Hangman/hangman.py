@@ -1,7 +1,6 @@
 import random
 wordList = 'dog cow tortilla bird extraterrestrial undeniable disasterous explosive fortitude alligator symbiosis runner wheat foggy vision king loops showered typed untouchable invincible frog pool marshmallow buffet flying envious skeleton cranium gallows'.split()
 #.split() will split a string into seperate elements, by default set to space
-
 #VARIABLE_NAMES that are ALL CAPS are constants and are not meant to change.
 HANGMAN_BOARD = ['''
 x-----x
@@ -68,7 +67,6 @@ def displayBoard(missedLetters, correctLetters , secretWord):
     for letter in missedLetters:
         print(letter, end = ' ')
     print()
-    
     blanks = ' ' * len(secretWord)
     for i in range(len(secretWord)):
           if secretWord[i] in correctLetters:
@@ -88,20 +86,24 @@ def getGuess(alreadyGuessed):
           guess = input().lower()
           if len(guess) != 1:
                print('Please enter a single letter. \n')
-          elif guess not in "abcdefghijklmnopqrstuvwxyz":
-               print("Please enter an English letter only")
+          elif guess not in 'abcdefghijklmnopqrstuvwxyz':
+               print('Please enter an English letter only')
           elif guess in alreadyGuessed:
-               print("This letter has already been guessed. Please enter a different letter")
+               print('This letter has already been guessed. Please enter a different letter')
           else:
                return guess
 
 def playAgain():
     print("Would you like to play again? Type yes or no then press enter.")
     return input().lower().startswith('y') # return true or false based on input
-               
 
-
-
+#Start the actual game
+print('Let\'s play hangman!') # \ escapes special characters (allows for them to be printed)
+missedLetters = ''
+correctLetters = ''
+secretWord = getRandomWord(wordList)
+print('Secret testing word:' + secretWord)
+gameIsDone = False
 
 
 
