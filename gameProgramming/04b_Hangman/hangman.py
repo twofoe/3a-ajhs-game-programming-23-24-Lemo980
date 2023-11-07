@@ -69,14 +69,14 @@ def displayBoard(missedLetters, correctLetters , secretWord):
     print()
     blanks = '_' * len(secretWord)
     for i in range(len(secretWord)):
-          if secretWord[i] in correctLetters:
-                blanks = blanks[:i] + secretWord[i] + blanks[i+1:]
+        if secretWord[i] in correctLetters:
+            blanks = blanks[:i] + secretWord[i] + blanks[i+1:]
                 # the : character is used to slice things into pieces
                 #[:i] means slice from the start until index i
                 #[i+1:] means slice from i+1 to the end
                 #[startingPoint:endingPoint]
     for letter in blanks:
-          print(letter, end = ' ')
+        print(letter, end = ' ')
     print()
      
 def getGuess(alreadyGuessed):
@@ -84,6 +84,7 @@ def getGuess(alreadyGuessed):
     while True:
         print('Please guess a letter and press enter')
         guess = input().lower()
+        #guess = guess.lower()
         if len(guess) != 1:
             print('Please enter a single letter. \n')
         elif guess not in 'abcdefghijklmnopqrstuvwxyz':
@@ -119,28 +120,28 @@ while True: #99% of the time the game loop is done this way
         foundAllLetters = True
         for i in range(len(secretWord)):
             if secretWord[i] not in correctLetters:
-                  foundAllLetters = False
-                  break
+                foundAllLetters = False
+                break
         if foundAllLetters:
             print('Congradulations! You have guessed correctly. \n')
             gameIsDone = True
     else: #missed letter guess
         missedLetters = missedLetters + guess
 
-        if len(missedLetters) == len(HANGMAN_BOARD) -1:
+        if len(missedLetters) == len(HANGMAN_BOARD) - 1:
             displayBoard(missedLetters, correctLetters, secretWord)
             print('You have used all of your guesses. You have failed')
             print('The secret word was ' + secretWord)
             gameIsDone = True
              
     if gameIsDone:
-        playAgain()
-        secretWord = getRandomWord()
-        missedLetters = ''
-        correctLetters = ''
-        gameIsDone = False
+        if playAgain(): 
+            secretWord = getRandomWord()
+            missedLetters = ''
+            correctLetters = ''
+            gameIsDone = False
     else:
-         break
+        break
                       
 
 
