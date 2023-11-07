@@ -67,31 +67,31 @@ def displayBoard(missedLetters, correctLetters , secretWord):
     for letter in missedLetters:
         print(letter, end = ' ')
     print()
-    blanks = ' ' * len(secretWord)
+    blanks = '_' * len(secretWord)
     for i in range(len(secretWord)):
           if secretWord[i] in correctLetters:
-               blanks = blanks[:i] + secretWord[i] + blanks[i+1:]
-               # the : character is used to slice things into pieces
-               #[:i] means slice from the start until index i
-               #[i+1:] means slice from i+1 to the end
-               #[startingPoint:endingPoint]
+                blanks = blanks[:i] + secretWord[i] + blanks[i+1:]
+                # the : character is used to slice things into pieces
+                #[:i] means slice from the start until index i
+                #[i+1:] means slice from i+1 to the end
+                #[startingPoint:endingPoint]
     for letter in blanks:
           print(letter, end = ' ')
     print()
      
 def getGuess(alreadyGuessed):
     #Only allow: single character, A-Z only, hasnt been guessed
-     while True:
-          print('Please guess a letter and press enter')
-          guess = input().lower()
-          if len(guess) != 1:
-               print('Please enter a single letter. \n')
-          elif guess not in 'abcdefghijklmnopqrstuvwxyz':
-               print('Please enter an English letter only')
-          elif guess in alreadyGuessed:
-               print('This letter has already been guessed. Please enter a different letter')
-          else:
-               return guess
+    while True:
+        print('Please guess a letter and press enter')
+        guess = input().lower()
+        if len(guess) != 1:
+            print('Please enter a single letter. \n')
+        elif guess not in 'abcdefghijklmnopqrstuvwxyz':
+            print('Please enter an English letter only')
+        elif guess in alreadyGuessed:
+            print('This letter has already been guessed. Please enter a different letter')
+        else:
+            return guess
 
 def playAgain():
     print("Would you like to play again? Type yes or no then press enter.")
