@@ -133,7 +133,14 @@ while True: #99% of the time the game loop is done this way
             print('The secret word was ' + secretWord)
             gameIsDone = True
              
-
+    if gameIsDone:
+        playAgain()
+        secretWord = getRandomWord()
+        missedLetters = ''
+        correctLetters = ''
+        gameIsDone = False
+    else:
+         break
                       
 
 
