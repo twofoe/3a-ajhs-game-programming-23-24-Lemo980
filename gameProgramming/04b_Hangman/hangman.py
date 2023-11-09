@@ -83,14 +83,14 @@ def getGuess(alreadyGuessed):
     #Only allow: single character, A-Z only, hasnt been guessed
     while True:
         print('Please guess a letter and press enter')
-        guess = input().lower()
-        #guess = guess.lower()
+        guess = input()
+        guess = guess.lower()
         if len(guess) != 1:
             print('Please enter a single letter. \n')
         elif guess not in 'abcdefghijklmnopqrstuvwxyz':
-            print('Please enter an English letter only')
+            print('Please enter an English letter only')   
         elif guess in alreadyGuessed:
-            print('This letter has already been guessed. Please enter a different letter')
+            print('This letter has already been guessed. Please enter a different letter')             
         else:
             return guess
 
@@ -136,12 +136,12 @@ while True: #99% of the time the game loop is done this way
              
     if gameIsDone:
         if playAgain(): 
-            secretWord = getRandomWord()
+            secretWord = getRandomWord(wordList) # You did not have the parameter here. 
             missedLetters = ''
             correctLetters = ''
             gameIsDone = False
-    else:
-        break
+        else:
+            break
                       
 
 
