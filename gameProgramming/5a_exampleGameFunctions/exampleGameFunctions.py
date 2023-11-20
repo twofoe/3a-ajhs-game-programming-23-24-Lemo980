@@ -5,7 +5,7 @@ import random
 weaponList = ["Wooden club", "Stone hammer", "Bone spear", "Magic staff of flame", "Steel greatsword", "Silver dagger", "Magical ice mace" ] #List of items in inventory
 hitPoints = 500.5 #how much total health a player has
 enemyList = ["Skeleton warrior", "Giant hog", "Dark mage", "Venomous serpent", "Goblin warrior", "Giant warrior", "Tree monster", "Werewolf"] #List of possible enemies
-
+playerAlive = True
 
 
 
@@ -14,8 +14,6 @@ enemyList = ["Skeleton warrior", "Giant hog", "Dark mage", "Venomous serpent", "
 #Function Definitions
 
 def enemyEncounter(weaponList,enemyList): #Randomly selects an enemy and allows the user to choose a weapon based on what enemy is selected
-    enemy = enemyList[random.randint(0, 7)]
-    print(f"A {enemy} crosses your path and begins battle")
     print("""Your weapon options are:
         1: Wooden club
         2: Stone hammer
@@ -25,7 +23,7 @@ def enemyEncounter(weaponList,enemyList): #Randomly selects an enemy and allows 
         6: Silver dagger
         7: Magical ice mace""")
     equippedWeapon = weaponList[int(input("Please choose a weapon using a number 1 - 7 \n")) - 1]
-    return equippedWeapon, enemy
+    return equippedWeapon
 
 
 def damage(equippedWeapon, enemy): #Determines how much damage an enemy will take when hit with different weapons then returns damage value
@@ -150,7 +148,7 @@ def damage(equippedWeapon, enemy): #Determines how much damage an enemy will tak
             damage = 20
     return damage
 
-def enemyAttack(enemy):
+def enemyAttack(enemy): #sets attack damage forq each enemy
     if enemy == "Skeleton warrior":
         enemyAttack = 40
     elif enemy == "Giant hog":
@@ -169,12 +167,22 @@ def enemyAttack(enemy):
         enemyAttack = 300
     return enemyAttack
 
-def gameFunction(hitPoints):
-    if hitPoints > 500.5:
-        playerAlive = True
-    while playerAlive:
-        enemyEncounter(weaponList, enemyList)
+# def gameFunction(hitPoints, enemyAttack):
+#     while playerAlive:
+#         enemyEncounter(weaponList, enemyList)
+#         hitPoints -= enemyAttack()
+#         if hitPoints > 0:
+#             playerAlive = True
+#         else:
+#             playerAlive = False
+
         
+# gameFunction(hitPoints)
+
+enemyEncounter(weaponList, enemyList)
+enemy = enemyList[random.randint(0, 7)]
+print(f"A {enemy} crosses your path and begins battle")
+damage(equippedWeapon)
 
 
 
@@ -208,18 +216,6 @@ def gameFunction(hitPoints):
 
 
 
-
-
-
-
-
-
-
-def func3():
-    pass
-
-def func3():
-    pass
 
 
 
