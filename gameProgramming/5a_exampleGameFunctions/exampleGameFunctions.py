@@ -3,9 +3,10 @@ import random
 
 #Variable Declarations
 weaponList = ["Wooden club", "Stone hammer", "Bone spear", "Magic staff of flame", "Steel greatsword", "Silver dagger", "Magical ice mace" ] #List of items in inventory
-hitPoints = 500.5 #how much total health a player has
+hitPoints = 300.5 #how much total health a player has
 enemyList = ["Skeleton warrior", "Giant hog", "Dark mage", "Venomous serpent", "Goblin warrior", "Giant warrior", "Tree monster", "Werewolf"] #List of possible enemies
 playerAlive = True
+playAgain = "y"
 
 
 
@@ -13,7 +14,7 @@ playerAlive = True
 
 #Function Definitions
 
-def enemyEncounter(weaponList,enemyList): #Randomly selects an enemy and allows the user to choose a weapon based on what enemy is selected
+def weaponChoice(weaponList): #Randomly selects an enemy and allows the user to choose a weapon based on what enemy is selected
     print("""Your weapon options are:
         1: Wooden club
         2: Stone hammer
@@ -167,22 +168,30 @@ def enemyAttack(enemy): #sets attack damage forq each enemy
         enemyAttack = 300
     return enemyAttack
 
-# def gameFunction(hitPoints, enemyAttack):
-#     while playerAlive:
-#         enemyEncounter(weaponList, enemyList)
-#         hitPoints -= enemyAttack()
-#         if hitPoints > 0:
-#             playerAlive = True
-#         else:
-#             playerAlive = False
+def gameFunction(hitPoints, enemyAttack):
+    enemyHealth = 100
+    playerAlive = True
+    enemy = enemyList[random.randint(0, 7)]
+    print(f"A {enemy} crosses your path and begins battle")
+    weapon = weaponChoice(weaponList)
+    while playerAlive and enemyHealth > 0:
+        enemyHealth -= damage(weapon, enemy)
+        if enemyHealth > 1:
+            hitPoints -= enemyAttack(enemy)
+            if hitPoints > 0:
+                playerAlive = True
+            else:
+                playerAlive = False
+                print("You have died")
+        else:
+            print(f"You have killed the {enemy}")
 
-        
-# gameFunction(hitPoints)
-
-enemyEncounter(weaponList, enemyList)
-enemy = enemyList[random.randint(0, 7)]
-print(f"A {enemy} crosses your path and begins battle")
-damage(equippedWeapon)
+while playAgain == "y":
+    gameFunction(hitPoints, enemyAttack)
+    print("Would you like to play again?")
+    playAgain = input("Please type y for yes or n for no\n")
+    if playAgain == "n":
+        break
 
 
 
