@@ -1,4 +1,4 @@
-# Example Game Functions, Eliot Blanton, v8.1
+# Example Game Functions, Eliot Blanton, v8.2
 import random
 #Variable Declarations
 weaponList = ["Wooden club", "Stone hammer", "Bone spear", "Magic staff of flame", "Steel greatsword", "Silver dagger", "Magical ice mace" ] #List of items in inventory
