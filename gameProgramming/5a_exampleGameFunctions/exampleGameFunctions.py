@@ -1,16 +1,11 @@
 # Example Game Functions, Eliot Blanton, v8.1
 import random
-
 #Variable Declarations
 weaponList = ["Wooden club", "Stone hammer", "Bone spear", "Magic staff of flame", "Steel greatsword", "Silver dagger", "Magical ice mace" ] #List of items in inventory
-hitPoints = 150.5 #how much total health a player has
+hitPoints = 150.5 #How much total health a player has
 enemyList = ["Skeleton warrior", "Giant hog", "Dark mage", "Venomous serpent", "Goblin warrior", "Giant warrior", "Tree monster", "Werewolf"] #List of possible enemies
-playerAlive = True
-playAgain = "y"
-
-
-
-
+playerAlive = True #Is the player alive or not
+playAgain = "y" #Does the player want to play again
 
 #Function Definitions
 
@@ -25,7 +20,6 @@ def weaponChoice(weaponList): #Allows the user to choose a weapon then returns c
         7: Magical ice mace""")
     equippedWeapon = weaponList[int(input("Please choose a weapon using a number 1 - 7 \n")) - 1]
     return equippedWeapon
-
 
 def damage(equippedWeapon, enemy): #Determines how much damage an enemy will take when hit with different weapons then returns damage value
     if equippedWeapon == "Wooden club":
@@ -149,7 +143,7 @@ def damage(equippedWeapon, enemy): #Determines how much damage an enemy will tak
             damage = 20
     return damage
 
-def enemyAttack(enemy): #sets attack damage for each enemy then returns the enemy's attack
+def enemyAttack(enemy): #Sets attack damage for each enemy then returns the enemy's attack
     if enemy == "Skeleton warrior":
         enemyAttack = 40
     elif enemy == "Giant hog":
@@ -168,16 +162,16 @@ def enemyAttack(enemy): #sets attack damage for each enemy then returns the enem
         enemyAttack = 300
     return enemyAttack
 
-def gameFunction(hitPoints, enemyAttack): #chooses random enemy, runs weapon choosing function, damages the enemy based on the weapon, damages the player based on the enemy, then loops damaging until the player or enemy have been killed
-    enemyHealth = 100
+def gameFunction(hitPoints, enemyAttack): #Chooses random enemy, runs weapon choosing function, damages the enemy based on the weapon, damages the player based on the enemy, then loops damaging until the player or enemy have been killed
+    enemyHealth = 100 #Enemy can take 100 damage before dying
     playerAlive = True
-    enemy = enemyList[random.randint(0, 7)]
+    enemy = enemyList[random.randint(0, 7)] #Selects enemy from list
     print(f"A {enemy} crosses your path and begins battle")
     weapon = weaponChoice(weaponList)
     while playerAlive and enemyHealth > 0:
-        enemyHealth -= damage(weapon, enemy)
+        enemyHealth -= damage(weapon, enemy) #Damages enemy
         if enemyHealth > 1:
-            hitPoints -= enemyAttack(enemy)
+            hitPoints -= enemyAttack(enemy) #Damages player
             if hitPoints > 0:
                 playerAlive = True
             else:
@@ -186,7 +180,7 @@ def gameFunction(hitPoints, enemyAttack): #chooses random enemy, runs weapon cho
         else:
             print(f"You have killed the {enemy}")
 
-while playAgain == "y": #allows the user to decide to play again
+while playAgain == "y": #Allows the user to decide to play again
     gameFunction(hitPoints, enemyAttack)
     print("Would you like to play again?")
     playAgain = input("Please type y for yes or n for no\n")
