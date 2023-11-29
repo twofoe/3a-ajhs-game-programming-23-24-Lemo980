@@ -1,4 +1,4 @@
-# Example Game Functions, Eliot Blanton, v0.0
+# Example Game Functions, Eliot Blanton, v8.1
 import random
 
 #Variable Declarations
@@ -14,7 +14,7 @@ playAgain = "y"
 
 #Function Definitions
 
-def weaponChoice(weaponList): #Randomly selects an enemy and allows the user to choose a weapon based on what enemy is selected
+def weaponChoice(weaponList): #Allows the user to choose a weapon then returns chosen weapon
     print("""Your weapon options are:
         1: Wooden club
         2: Stone hammer
@@ -149,7 +149,7 @@ def damage(equippedWeapon, enemy): #Determines how much damage an enemy will tak
             damage = 20
     return damage
 
-def enemyAttack(enemy): #sets attack damage forq each enemy
+def enemyAttack(enemy): #sets attack damage for each enemy then returns the enemy's attack
     if enemy == "Skeleton warrior":
         enemyAttack = 40
     elif enemy == "Giant hog":
@@ -168,7 +168,7 @@ def enemyAttack(enemy): #sets attack damage forq each enemy
         enemyAttack = 300
     return enemyAttack
 
-def gameFunction(hitPoints, enemyAttack):
+def gameFunction(hitPoints, enemyAttack): #chooses random enemy, runs weapon choosing function, damages the enemy based on the weapon, damages the player based on the enemy, then loops damaging until the player or enemy have been killed
     enemyHealth = 100
     playerAlive = True
     enemy = enemyList[random.randint(0, 7)]
@@ -186,7 +186,7 @@ def gameFunction(hitPoints, enemyAttack):
         else:
             print(f"You have killed the {enemy}")
 
-while playAgain == "y":
+while playAgain == "y": #allows the user to decide to play again
     gameFunction(hitPoints, enemyAttack)
     print("Would you like to play again?")
     playAgain = input("Please type y for yes or n for no\n")
