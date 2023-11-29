@@ -3,7 +3,7 @@ import random
 
 #Variable Declarations
 weaponList = ["Wooden club", "Stone hammer", "Bone spear", "Magic staff of flame", "Steel greatsword", "Silver dagger", "Magical ice mace" ] #List of items in inventory
-hitPoints = 300.5 #how much total health a player has
+hitPoints = 150.5 #how much total health a player has
 enemyList = ["Skeleton warrior", "Giant hog", "Dark mage", "Venomous serpent", "Goblin warrior", "Giant warrior", "Tree monster", "Werewolf"] #List of possible enemies
 playerAlive = True
 playAgain = "y"
@@ -108,7 +108,7 @@ def damage(equippedWeapon, enemy): #Determines how much damage an enemy will tak
         elif enemy == "Goblin warrior":
             damage = 60
         elif enemy == "Giant warrior":
-            damage = 50
+            damage = 80
         elif enemy == "Tree monster":
             damage = 30
         elif enemy == "Werewolf":
