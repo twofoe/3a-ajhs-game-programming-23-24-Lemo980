@@ -187,18 +187,4 @@ while playAgain == "y": #Allows the user to decide to play again
     if playAgain == "n":
         break
 
-#
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Code Review by Zac Scott 
